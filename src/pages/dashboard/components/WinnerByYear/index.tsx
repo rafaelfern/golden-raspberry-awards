@@ -22,7 +22,7 @@ function WinnerByYear() {
             <div className='w-full flex mb-5 mt-5'>
                 <SearchInput setSearchYear={setSearchYear} searchYear={searchYear} handleSubmit={handleSubmit}/>
             </div>
-            <table className="table-fixed text-left w-full">
+            <table role="table-winner" className="table-fixed text-left w-full">
                 <thead>
                     <tr>
                         <th className='border border-spacing-2 bg-gray-200 border-slate-300 pl-2'>Id</th>
