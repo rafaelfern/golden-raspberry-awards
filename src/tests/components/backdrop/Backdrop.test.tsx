@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Backdrop from '../../../components/backdrop';
+import Backdrop from '../../../components/Backdrop';
 
 describe('Backdrop Component', () => {
   it('should render the backdrop with spinner when isLoading is true', () => {

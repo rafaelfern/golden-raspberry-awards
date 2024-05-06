@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import useApi from '../../hooks/useApi';
 import SearchInputBoolean from '../../components/SearchInputBoolean';
 import SearchInputYear from '../../components/SearchInputYear';
-import Backdrop from '../../components/backdrop';
+import Backdrop from '../../components/Backdrop';
 import { SkipBack, ChevronLeft, ChevronRight, SkipForward } from 'react-feather';
 
 function List() {
@@ -113,11 +113,11 @@ function List() {
       <SkipForward size={10} />
     </button>
   );
-  console.log('yearInput ', yearInput);
 
   useEffect(
-    function getListMovies() {
-      if (yearInput.length === 4 || yearInput.length === 0) execute('get', { page: 0, size: 10, winner: winnerSelection, year: yearInput });
+    function getListMoviesByYear() {
+      if (yearInput.length === 4 || yearInput.length === 0)
+        execute('get', { page: currentPage - 1, size: 10, winner: winnerSelection, year: yearInput });
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [currentPage, winnerSelection, yearInput]

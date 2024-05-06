@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import useApi from '../../../../hooks/useApi';
 
-const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
 const topStudiosPosition = 3;
 
 function WinnersMultipleTable() {
-  const { data, loading, error, execute } = useApi(apiUrl);
+  const { data, loading, error, execute } = useApi();
 
   useEffect(function getMultipleWinnersPerYear() {
     execute('get', { projection: 'studios-with-win-count' });
