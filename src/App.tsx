@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Dashboard from './pages/Dashboard'
-import List from './pages/List'
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Dashboard from './pages/Dashboard';
+import List from './pages/List';
 
 function App() {
-
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const handleResize = () => setScreenWidth(window.innerWidth);
@@ -25,14 +24,14 @@ function App() {
         <Sidebar screenWidth={screenWidth} />
         <div className="content">
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />}/>
-            <Route path="/" element={<Dashboard />}/>
-            <Route path="/list" element={<List />}/>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/list" element={<List />} />
           </Routes>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

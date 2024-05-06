@@ -1,10 +1,10 @@
 interface ISearchInputYear {
   value: string;
   onChange: () => void;
-} 
+}
 
 const SearchInputYear = (props: ISearchInputYear) => {
-  const { value, onChange } = props
+  const { value, onChange } = props;
   return (
     <input
       value={value}
