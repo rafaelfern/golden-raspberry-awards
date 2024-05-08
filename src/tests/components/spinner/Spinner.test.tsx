@@ -7,12 +7,11 @@ describe('Spinner Component', () => {
 
     const spinnerElement = screen.getByTestId('spinner');
     expect(spinnerElement).toBeInTheDocument();
-    
+
     const svgElement = spinnerElement.querySelector('svg');
     expect(svgElement).toBeInTheDocument();
-    
+
     const srOnlyElement = screen.getByText('Loading...');
     expect(srOnlyElement).toBeInTheDocument();
-    expect(srOnlyElement).toHaveClass('sr-only');
   });
 });

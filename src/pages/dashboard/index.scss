@@ -54,3 +54,13 @@
     color: rgb(54, 54, 54);
   }
 }
+
+@media (max-width: 768px) {
+  .dash-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-content {
+    display: block;
+  }
+}

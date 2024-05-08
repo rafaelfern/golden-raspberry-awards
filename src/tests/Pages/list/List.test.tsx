@@ -19,8 +19,8 @@ describe('List component', () => {
 
     const winnerInput = getByRole('combobox', { name: /Winner/i });
 
-    fireEvent.change(winnerInput, { target: { value: 'true' } }); // Seleciona "Yes"
-    fireEvent.change(winnerInput, { target: { value: 'false' } }); // Seleciona "No"
+    fireEvent.change(winnerInput, { target: { value: 'true' } });
+    fireEvent.change(winnerInput, { target: { value: 'false' } });
 
     expect(winnerInput.value).toBe('false');
   });

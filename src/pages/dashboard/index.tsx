@@ -6,7 +6,7 @@ import './index.scss';
 
 function Dashboard() {
   return (
-    <div>
+    <div className="dash-content">
       <div className="sub-content">
         <WinnersMultipleTable data-testid="winners-multiple-table" />
         <WinnersStudiosTable data-testid="winners-studios-table" />

@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Sidebar from '../../../components/Sidebar';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { vi } from 'vitest';
 
 describe('Sidebar Component', () => {
   it('should renders sidebar buttons and links', () => {
