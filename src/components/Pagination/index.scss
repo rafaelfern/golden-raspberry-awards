@@ -1,0 +1,36 @@
+svg {
+  fill: rgb(107, 107, 107);
+  width: 22px;
+  height: 22px;
+}
+
+.btn-prev-disabled > svg {
+  fill: rgb(165, 165, 165);
+}
+
+.btn-first-disabled > svg {
+  fill: rgb(165, 165, 165);
+}
+
+.btn-next-disabled > svg {
+  fill: rgb(165, 165, 165);
+}
+
+.btn-last-disabled > svg {
+  fill: rgb(165, 165, 165);
+}
+
+.btn-prev-active {
+  border-radius: 0.5rem;
+  border-width: 1px;
+}
+
+.btn-active {
+  background-color: rgb(93, 168, 244) !important;
+  color: white;
+}
+
+.btn-not-active {
+  background-color: rgb(229 231 235);
+  color: rgb(31 41 55);
+}

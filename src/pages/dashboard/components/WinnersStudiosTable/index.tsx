@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import useApi from '../../../../hooks/useApi';
+import '../../index.scss';
 
 const topStudiosPosition = 3;
 
@@ -14,15 +15,15 @@ function WinnersMultipleTable() {
   if (error) return <p>Ocorreu um erro: {error.message}</p>;
 
   return (
-    <div className="rounded overflow-hidden shadow-lg py-5 px-5">
-      <div className="text-left mb-3">
-        <span className="text-xl font-bold">{`Top ${topStudiosPosition} studios with winners`}</span>
+    <div className="card-content">
+      <div className="table-title-content">
+        <span className="title">{`Top ${topStudiosPosition} studios with winners`}</span>
       </div>
-      <table role="table-winners-studio" className="table-fixed text-left w-full">
+      <table role="table-winners-studio">
         <thead>
           <tr>
-            <th className="border border-spacing-2 bg-gray-200 border-slate-300 pl-2">Name</th>
-            <th className="border bg-gray-200 border-slate-300 pl-2">Win Count</th>
+            <th>Name</th>
+            <th>Win Count</th>
           </tr>
         </thead>
         <tbody>
@@ -31,8 +32,8 @@ function WinnersMultipleTable() {
             .slice(0, topStudiosPosition)
             .map((st, index) => (
               <tr key={index}>
-                <td className="border border-slate-300 pl-2">{st.name}</td>
-                <td className="border border-slate-300 pl-2">{st.winCount}</td>
+                <td>{st.name}</td>
+                <td>{st.winCount}</td>
               </tr>
             ))}
         </tbody>

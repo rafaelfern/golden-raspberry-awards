@@ -1,0 +1,65 @@
+.card-content-list {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding-left: 1.25rem;
+  padding-top: 0.7rem;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  box-shadow: 0px 8px 13px -16px rgba(0, 0, 0, 0.56);
+  border: 1px solid rgb(233, 233, 233);
+  margin-top: 7px;
+  width: 100%;
+}
+
+.list-title-content {
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+  .list-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  width: 100px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #e6e6e6;
+  color: rgb(54, 54, 54);
+  text-align: center;
+}
+
+.head-input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+.table-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+  height: 40px;
+  font-size: 12px;
+  width: 100%;
+  background-color: rgb(232, 232, 232);
+}

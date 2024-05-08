@@ -1,3 +1,4 @@
+import './index.scss';
 interface ISearchInputBoolean {
   value: string;
   onChange: (e: boolean | undefined) => void;
@@ -16,11 +17,15 @@ const searchInputBoolean = (props: ISearchInputBoolean) => {
           onChange(undefined);
         }
       }}
-      className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+      aria-label="Winner?"
     >
       <option value="">Yes/No</option>
-      <option value="true">Yes</option>
-      <option value="false">No</option>
+      <option aria-label="Yes" value="true">
+        Yes
+      </option>
+      <option aria-label="No" value="false">
+        No
+      </option>
     </select>
   );
 };

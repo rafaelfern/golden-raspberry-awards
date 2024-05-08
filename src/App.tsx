@@ -7,7 +7,6 @@ import List from './pages/List';
 
 function App() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
   const handleResize = () => setScreenWidth(window.innerWidth);
 
   useEffect(() => {

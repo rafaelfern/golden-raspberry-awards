@@ -1,5 +1,5 @@
-import { useNavigate, Link } from 'react-router-dom';
-import './index.css';
+import { Link } from 'react-router-dom';
+import './index.scss';
 
 interface ISidebar {
   screenWidth: number;
@@ -7,17 +7,13 @@ interface ISidebar {
 
 function Sidebar(props: ISidebar) {
   const { screenWidth } = props;
-  const navigate = useNavigate();
 
   return (
     <>
       {screenWidth <= 768 ? (
-        <div className="">
-          <button
-            onClick={() => navigate('dashboard')}
-            className="mt-4 p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div data-testid="sidebar" className="sidebar">
+          <button role="button" onClick={() => window.location.assign('dashboard')} className="button">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -26,23 +22,19 @@ function Sidebar(props: ISidebar) {
               />
             </svg>
           </button>
-          <button
-            onClick={() => navigate('list')}
-            className="mt-4 p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <button onClick={() => window.location.assign('list')} className="button">
+            <svg xmlns="http://www.w3.org/2000/svg" className="icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
             </svg>
-            <span className="sr-only">Search</span>
           </button>
         </div>
       ) : (
-        <div className="sidebar">
+        <div data-testid="sidebar" className="sidebar">
           <ul>
-            <li>
+            <li role="button" className="btn-link">
               <Link to={'dashboard'}>Dashboard</Link>
             </li>
-            <li>
+            <li role="button">
               <Link to={'list'}>List</Link>
             </li>
           </ul>

@@ -1,0 +1,29 @@
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  .button {
+    margin-top: 1rem;
+    padding: 0.625rem;
+    margin-inline-start: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: rgb(255 255 255);
+    background-color: rgb(29 78 216);
+    .icon-svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  ul li a {
+    text-decoration: none;
+  }
+
+  .btn-link {
+    margin-bottom: 5px;
+  }
+}

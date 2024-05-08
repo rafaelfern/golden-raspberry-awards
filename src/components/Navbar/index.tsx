@@ -1,8 +1,8 @@
-import './index.css';
+import './index.scss';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark bg-slate-800 pb-3 pt-3 sm:flex">
+    <nav>
       <div className="flex ml-10">
         <h3 className="text-2xl text-white">Frontend React Test</h3>
       </div>
