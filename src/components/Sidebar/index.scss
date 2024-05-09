@@ -21,10 +21,11 @@
   }
   ul li a {
     text-decoration: none;
-  }
-
-  .btn-link {
-    margin-bottom: 5px;
+    color: rgb(111, 111, 255);
+    &.active {
+      color: rgb(169, 169, 169);
+      font-weight: 700;
+    }
   }
 }
 
