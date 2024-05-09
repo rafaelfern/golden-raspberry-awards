@@ -27,3 +27,16 @@
     margin-bottom: 5px;
   }
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 10%;
+    .button {
+      background-color: transparent;
+      border-style: none;
+      svg {
+        color: black;
+      }
+    }
+  }
+}
