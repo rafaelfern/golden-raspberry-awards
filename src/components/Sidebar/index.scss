@@ -34,8 +34,10 @@
     .button {
       background-color: transparent;
       border-style: none;
+      cursor: pointer;
       svg {
         color: black;
+        fill: transparent;
       }
     }
   }
