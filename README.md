@@ -46,3 +46,15 @@ launch the server
 ```bash
   yarn dev
 ```
+
+Run tests
+
+```bash
+  yarn test
+```
+
+Verify test coverage
+
+```bash
+  yarn coverage
+```
